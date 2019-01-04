@@ -1,0 +1,29 @@
+1)
+int_1 := int ((3-4x)/(2 * x**2 - 3x + 1), x);
+
+my_list := {};
+
+for i := 1.001 step 0.01 until 10 do
+	my_list := append(my_list, {{i, int ((3-4x) / (2 * x**2 - 3x + 1), x, 1.001, i)}});
+
+plot (my_list, int_1);
+
+2)
+int_2 := int (1 / cos(x) ** 4, x);
+
+my_list2 := {};
+
+for i := 0 step 0.01 until 1.5 do
+	my_list2 := append(my_list2, {{i, int (1 / cos(x) ** 4, x, 0, i)}});
+
+plot (my_list2, int_2, x=(0 .. 1.5), y=(0 .. 10));
+
+3)
+int_3 := int ((e ^ x) / (e ^ (2x) + 4), x);
+
+my_list3 := {};
+
+for i := 0 step 0.01 until 10 do
+	my_list3 := append(my_list3, {{i, int ((e ^ x) / (e ^ (2x) + 4), x, 0, i)}});
+
+plot (my_list3, int_3, x=(0 .. 10));
