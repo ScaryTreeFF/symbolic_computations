@@ -100,7 +100,7 @@ def parseTex(input_data):
                     print(f'Found that arg: {arg}')
 
                 
-            elif current_symbol in simple_funcs.keys:
+            elif current_symbol in simple_funcs:
                 # TODO make priorities of operands
                 # get function and its arguments
                 func = current_symbol
