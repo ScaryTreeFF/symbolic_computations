@@ -1,5 +1,6 @@
 from fractions import Fraction
 import re
+from symbol import Symbol
 
 """
 Representation:
@@ -9,8 +10,8 @@ a + b + c as "+"(a, b, c)
 ['function', arg1, arg2, arg3, ...]
 """
 
-def Symbol(symbol):
-    return symbol
+# def Symbol(symbol):
+#     return symbol
 
 def deleteOuterBrackets(data):
     return data[2:-2]
@@ -65,7 +66,7 @@ def parseTex(input_data):
                     int(x)
                     ret_val.append(int(x))
                 except:
-                    ret_val.append(['symbol', x])
+                    ret_val.append(Symbol(x))
             ret_val.insert(0, '*')
             return(ret_val)
             
