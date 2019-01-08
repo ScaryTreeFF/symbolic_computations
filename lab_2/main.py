@@ -14,11 +14,16 @@ def diffAlgo(data):
         'sqrt': sqrtDiff,
         'tan':  tanDiff
     }
-    
+
     def constDiff(data):
         # 1
         assert int(data) == data
         data = 0
+        return data
+
+    def symbolDiff(data):
+        assert isinstance(data, Symbol)
+        data = 1
         return data
 
     def powDiff(data):
