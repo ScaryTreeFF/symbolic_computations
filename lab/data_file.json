@@ -1,0 +1,49 @@
+{
+	"exprType": "binary", 
+	"value": "*",
+	"left":
+	{
+		"exprType": "binary", 
+		"value": "*", 
+		"left":
+		{ 
+			"exprType": "value", 
+			"value": 3
+		}, 
+		"right":
+		{ 
+			"exprType": "binary",
+			"value": "*",
+			"left":
+			{
+				"exprType": "symbol",
+				"value": "x"
+			},
+			"right":
+			{
+				"exprType": "symbol",
+				"value": "y"
+			}
+		} 
+	}, 
+	"right": {
+		"exprType": "binary",
+		"value": "*",
+		"left": {
+			"exprType": "value",
+			"value": 5
+		},
+		"right": {
+			"exprType": "binary",
+			"value": "*",
+			"left": {
+				"exprType": "symbol",
+				"value": "x"
+			},
+			"right": {
+				"exprType": "symbol",
+				"value": "y"
+			}
+		}
+	}
+}
