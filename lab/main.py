@@ -13,3 +13,11 @@ while expr_in != 'exit':
             print(expr)
     else:
         ctx.add_func(expr_in[0:eq_pos - 1], expr_in[eq_pos + 2:])
+
+# remember our new symbol 
+# then try to plot it:
+#   Expression: 
+#       try to parse it in f_parser
+#       create new Expression
+#       simplify
+#       plot

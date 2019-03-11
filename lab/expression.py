@@ -22,6 +22,7 @@ class Expression:
             simplify(expr)
             self.__clone(expr)
         elif self.type[0:4] == 'plot':
+            print(self.type)
             expr = Expression(self.value, ctx)
             simplify(expr)
             plot(expr, arg1, arg2, self.type[4], self.type[5])
