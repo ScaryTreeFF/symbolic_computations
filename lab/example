@@ -4,7 +4,5 @@ a = mul(add(x, -2), add(pow(x, 2), 1))
 
 plot(a, 1:10, 1:10, x, y)
 
-m = add(add(x, mul(-1, div(pow(x, 3), mul(2, 3)))), div(pow(x, 5), mul(2, mul(3, mul(4, 5)))))
-n = add(add(y, mul(-1, div(pow(y, 3), mul(2, 3)))), div(pow(y, 5), mul(2, mul(3, mul(4, 5)))))
-g = simplify(mul(m, n))
-plot(g, -5:5, -5:5, x, y)
+n[x] = add(add(x, mul(-1, div(pow(x, 3), mul(2, 3)))), div(pow(x, 5), mul(2, mul(3, mul(4, 5)))))
+plot(simplify(mul(n[x], n[y])), -5:5, -5:5, x, y)
