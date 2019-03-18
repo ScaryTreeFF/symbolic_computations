@@ -70,5 +70,5 @@ def parse(input_expr: str):
             return -1
     elif input_expr.isnumeric() or (input_expr[1:].isnumeric() and input_expr[0] == '-'):
         return 'value', int(input_expr), None, None
-    elif input_expr.isalnum():
+    else:
         return 'symbol', input_expr, None, None

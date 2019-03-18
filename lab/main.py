@@ -12,7 +12,10 @@ while expr_in != 'exit':
         if str(expr) != 'error':
             print(expr)
     else:
-        ctx.add_func(expr_in[0:eq_pos - 1], expr_in[eq_pos + 2:])
+        func = expr_in[0:eq_pos - 1]
+        name = func[:-3]
+        symbol = func[-2]
+        ctx.add_func(name, expr_in[eq_pos + 2:], symbol)
 
 # remember our new symbol 
 # then try to plot it:
